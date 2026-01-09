@@ -25,4 +25,6 @@ public class Project {
     public void changeDepartment(Department department){
         this.department = department;
     }
+
+    private String[] employees;
 }
