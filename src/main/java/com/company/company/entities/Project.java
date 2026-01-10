@@ -1,5 +1,6 @@
 package com.company.company.entities;
 
+import java.util.List;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,7 +15,7 @@ public class Project {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     private String name;
 
@@ -26,5 +27,6 @@ public class Project {
         this.department = department;
     }
 
-    private String[] employees;
+    @OneToMany(mappedBy = "project")
+    private List<Employee> employees;
 }

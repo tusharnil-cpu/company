@@ -14,7 +14,7 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     private String name;
 
@@ -30,7 +30,7 @@ public class Employee {
     @JoinColumn(name="project_id")
     private Project project;
 
-    //an employee can also be not assigned to any project
+    //an employee can also be NOT assigned to any project
     public void changeProject(Project project){
         this.project = project;
     }

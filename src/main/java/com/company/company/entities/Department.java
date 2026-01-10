@@ -1,5 +1,6 @@
 package com.company.company.entities;
 
+import java.util.List;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,7 +17,13 @@ public class Department {
     // this is just like having a primary key and an auto incriment in mysql code
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     private String name;
+
+    @OneToMany(mappedBy = "department")
+    private List<Employee> employees;
+
+    @OneToMany(mappedBy = "department")
+    private List<Project> projects;
 }
