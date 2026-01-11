@@ -24,7 +24,7 @@ public class EmployeeController {
     }
 
     @PutMapping("/updateProj/{id}")
-    public ResDto updateProj(@PathVariable Long id, ReqDto dto){
+    public ResDto updateProj(@PathVariable Long id,@RequestBody ReqDto dto){
         return employeeServices.updateProject(id, dto);
     }
 

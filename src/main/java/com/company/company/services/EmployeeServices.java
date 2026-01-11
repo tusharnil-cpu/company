@@ -64,6 +64,7 @@ public class EmployeeServices {
 
         // old/ already assigned project (can be a null)
         Project project = employee.getProject();
+//        System.out.println(dto.getProject());
         // dosent allow updating the project to null (Project level concern)
         Project projectNew = projectRepository.findById(dto.getProject()).orElseThrow(()->new RuntimeException("project with the given id does not exist"));
 
