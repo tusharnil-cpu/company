@@ -26,4 +26,21 @@ public class Department {
 
     @OneToMany(mappedBy = "department")
     private List<Project> projects;
+
+    public void addEmployee(Employee employee){
+        employees.add(employee);
+    }
+
+    public void addProject(Project project){
+        projects.add(project);
+    }
+
+        // these are as good as deleting the project and employee althoughther as they dept is mandatory for them
+    public void removeEmployee(Employee employee){
+        employees.remove(employee);
+    }
+
+    public void removeProject(Project project){
+        projects.remove(project);
+    }
 }

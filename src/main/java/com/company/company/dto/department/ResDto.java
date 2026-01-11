@@ -10,4 +10,6 @@ import lombok.NoArgsConstructor;
 public class ResDto {
     private Long id;
     private String name;
+    private String[] projects;
+    private String[] employees;
 }

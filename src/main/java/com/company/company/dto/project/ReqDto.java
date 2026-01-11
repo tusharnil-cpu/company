@@ -9,5 +9,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ReqDto {
     private String name;
-    private int department;
+    private Long department;
 }

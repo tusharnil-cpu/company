@@ -23,10 +23,14 @@ public class Project {
     @JoinColumn(name="department_id", nullable = false)
     private Department department;
 
-    public void changeDepartment(Department department){
-        this.department = department;
-    }
-
     @OneToMany(mappedBy = "project")
     private List<Employee> employees;
+
+    public void addEmployee(Employee employee){
+        employees.add(employee);
+    }
+
+    public void removeEmployee(Employee employee){
+        employees.remove(employee);
+    }
 }

@@ -8,8 +8,8 @@ import lombok.NoArgsConstructor;
 public class ReqDto {
 
     private String name;
-    private int department;
+    private Long department;
     // here we can choose to not have a project during intitialization defualting to Null
-    private Integer project;
+    private Long project;
 
 }

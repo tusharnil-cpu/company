@@ -22,12 +22,8 @@ public class Employee {
     @JoinColumn(name="department_id", nullable = false)
     private Department department;
 
-    public void changeDepartment(Department department){
-        this.department = department;
-    }
-
     @ManyToOne
-    @JoinColumn(name="project_id")
+    @JoinColumn(name="project_id", nullable = true)
     private Project project;
 
     //an employee can also be NOT assigned to any project

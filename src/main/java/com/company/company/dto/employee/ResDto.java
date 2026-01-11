@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ResDto {
-    private int id;
+    private Long id;
     private String name;
     private String department;
     private String project;
