@@ -55,8 +55,9 @@ public class DeptServices {
         return new ResDto(
                 department.getId(),
                 department.getName(),
-                employees,
-                projects
+                projects,
+                employees
+
         );
     }
 
@@ -99,8 +100,8 @@ public class DeptServices {
         return new ResDto(
                 department.getId(),
                 department.getName(),
-                employeesPrev,
-                projectsPrev
+                projectsPrev,
+                employeesPrev
         );
     }
 }

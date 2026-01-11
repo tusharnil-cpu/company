@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class EmployeeController {
 
-    private EmployeeServices employeeServices;
+    private final EmployeeServices employeeServices;
 
     @PostMapping("/create")
     public ResDto create(@RequestBody ReqDto dto){

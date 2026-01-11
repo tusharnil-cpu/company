@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class ProjectController {
 
-    private ProjectServices projectServices;
+    private final ProjectServices projectServices;
 
     @PostMapping("/create")
     public ResDto create(@RequestBody ReqDto dto){
