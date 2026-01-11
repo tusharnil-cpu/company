@@ -25,9 +25,9 @@ public class ProjectServices {
     private final DepartmentRepository departmentRepository;
     private final EmployeeRepository employeesRepository;
 
-    public ResDto create(Long dept_id, ReqDto dto){
+    public ResDto create(ReqDto dto){
 
-        Department department = departmentRepository.findById(dept_id).orElseThrow(()->new RuntimeException("dept not found"));
+        Department department = departmentRepository.findById(dto.getDepartment()).orElseThrow(()->new RuntimeException("dept not found"));
         Project project = new Project(null, dto.getName(), department, null);
         Project saved = projectRepository.save(project);
 
@@ -58,11 +58,10 @@ public class ProjectServices {
                 employee,
                 department.getName()
         );
-
     }
 
     // here the catch is to set porject as null for all those employees assigned this project
-    public ResDto delete(Long id, ResDto dto){
+    public ResDto delete(Long id){
 
         Project project = projectRepository.findById(id).orElseThrow(()-> new RuntimeException("project with the given id does not exist"));
         Department department = project.getDepartment();

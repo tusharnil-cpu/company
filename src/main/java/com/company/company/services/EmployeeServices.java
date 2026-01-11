@@ -43,7 +43,7 @@ public class EmployeeServices {
         );
     }
 
-    public ResDto display( Long id ){
+    public ResDto displayDetails( Long id ){
 
         Employee employee = employeeRepository.findById(id).orElseThrow(()->new RuntimeException("employee with the given id does not exist"));
         Department department = employee.getDepartment();
